@@ -7,8 +7,10 @@
     <meta name="keywords" content="Southern BBQ, food truck, BBQ catering, Fayetteville NC, Myrtle Beach SC, pulled pork, smoked brisket, ribs">
     <meta name="author" content="Dantwain Shackleford Jr">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="myscript.js"></script>
+
     <title>Tisdale's Southern BBQ Homepage</title>
 </head>
 
@@ -25,7 +27,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../css/tsbq-logo.jpg" alt="Tisdale's Southern BBQ Logo" width="250">
+            <img src="tsbq-logo.jpg" alt="Tisdale's Southern BBQ Logo" width="250">
         </div>
         <div class="name">
             <h1>Tisdale's <br>Southern<br> BBQ</h1>
@@ -59,11 +61,11 @@
 
             <div class="special">
                 <h2>Today's Specials:</h2>
-                <img src="../css/wings.webp" alt="image of wings" width="250">
+                <img src="wings.webp" alt="image of wings" width="250">
                 <p>6pc Smoked Chicken Wings w/Honey BBQ sauce - $6.70</p>
-                <img src="../css/cornbread.jpg" alt="cornbread image" width="250">
+                <img src="cornbread.jpg" alt="cornbread image" width="250">
                 <p>2pc Honey Butter Cornbread - $1.70</p>
-                <img src="../css/cake.jpg"alt="image of pound cake" width="250">
+                <img src="cake.jpg"alt="image of pound cake" width="250">
                 <p>Pound Cake - $2.50 / slice</p>
             </div>
 
@@ -99,6 +101,16 @@
                     <input type="submit" value="Send">
                 </form>
             </div>
+
+            <div id="popupCTA" class="popup">
+                <div class="popup-content">
+                    <span class="close-btn" onclick="closePopup()">&times;</span>
+                    <h2>Order Online Today!</h2>
+                    <p>Get your favorite BBQ delivered to your doorstep.</p>
+                    <a href="menu.html" class="order-btn">Order Now</a>
+                </div>
+            </div>
+
         </section>
     </main>
 
