@@ -16,26 +16,32 @@ function closePopup() {
 
 // JavaScript to create a modern menu with tabs for viewing sections
 
-// Wait for the DOM to load before executing the script
-document.addEventListener('DOMContentLoaded', function () {
-    // Select all tab buttons and content sections
-    const tabButtons = document.querySelectorAll('.tab-button');
+// Function to open a tab and display its content
+// Function to toggle the display of tab contents
+function openTab(tabId) {
+    // Get all tab content elements
     const tabContents = document.querySelectorAll('.tab-content');
-
-    // Function to handle tab switching
-    function switchTab(event) {
-        // Remove the 'active' class from all buttons and contents
-        tabButtons.forEach(button => button.classList.remove('active'));
-        tabContents.forEach(content => content.classList.remove('active'));
-
-        // Add the 'active' class to the clicked button and its associated content
-        const targetTab = event.currentTarget.dataset.target;
-        event.currentTarget.classList.add('active');
-        document.getElementById(targetTab).classList.add('active');
-    }
-
-    // Attach click event listeners to each tab button
-    tabButtons.forEach(button => {
-        button.addEventListener('click', switchTab);
+    tabContents.forEach(content => {
+        content.classList.remove('active'); // Hide all content
     });
+
+    // Get all tab buttons
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => {
+        button.classList.remove('active'); // Remove active state from all buttons
+    });
+
+    // Show the selected tab content
+    document.getElementById(tabId).classList.add('active');
+
+    // Highlight the clicked tab button
+    event.currentTarget.classList.add('active');
+}
+
+// Automatically display the first tab on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const firstButton = document.querySelector('.tab-button');
+    if (firstButton) {
+        firstButton.click();
+    }
 });

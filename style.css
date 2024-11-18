@@ -77,6 +77,32 @@ header {
 .welcome p {
     color: white
 }
+
+/* Add animation to h2 */
+.animated-text {
+    animation: slideDown 2s ease-in-out forwards; /* Applies the slideDown animation */
+    opacity: 0; /* Ensures the text is initially hidden */
+}
+
+/* Define keyframes for vertical movement */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50px); /* Start 50px above its original position */
+        opacity: 0; /* Fully invisible at the start */
+    }
+    100% {
+        transform: translateY(0); /* End at the original position */
+        opacity: 1; /* Fully visible at the end */
+    }
+}
+
+/* Explanation of animation properties:
+   - animation: [name] [duration] [timing-function] [play-state];
+     - slideDown: The name of the animation defined in keyframes.
+     - 2s: Duration of the animation (2 seconds).
+     - ease-in-out: Smooth acceleration and deceleration for a natural effect.
+     - forwards: Keeps the final position after the animation ends.*/
+
 /* Header Styles */
 header {
     background-color: #ffffff;
@@ -173,36 +199,46 @@ p {
     text-align: center;
 }
 
+/* Styling the tabs */
 .tabs {
-    display: flex; /*style for individual tabs*/
-    justify-content: space-around;
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
-.tab-link {
-    padding: 10px 20px;
-    background-color: #000000;
-    border: 1px solid #ccc;
+.tab-button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: inherit;
+    border: none;
+    color: white;
     cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
 }
 
-/*Highlight active tab*/
-.tab-link.active {
+.tab-button:hover {
     background-color: #c61717;
-    color: white;
-    border: none;
 }
-/*hide sections*/
+
+.tab-button.active {
+    background-color: #c61717; /* Active button styling */
+    color: #fff;
+}
+
+/* Hide tab content by default */
 .tab-content {
     display: none;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
+    text-align: center;
+    margin-top: 20px;
 }
-/*Display content of active tab*/
+
+/* Show active tab content */
 .tab-content.active {
     display: block;
 }
+
+
 
 
 /* Catering Form Styles */
