@@ -207,9 +207,9 @@ p {
 }
 
 .tab-button {
-    padding: 10px 15px;
+    float: left;
     margin: 5px;
-    background-color: inherit;
+    background-color: #000000;
     border: none;
     color: white;
     cursor: pointer;
@@ -223,7 +223,7 @@ p {
 
 .tab-button.active {
     background-color: #c61717; /* Active button styling */
-    color: #fff;
+    color: #c61717;
 }
 
 /* Hide tab content by default */
