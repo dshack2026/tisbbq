@@ -173,6 +173,38 @@ p {
     text-align: center;
 }
 
+.tabs {
+    display: flex; /*style for individual tabs*/
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    padding: 10px 20px;
+    background-color: #000000;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/*Highlight active tab*/
+.tab-link.active {
+    background-color: #c61717;
+    color: white;
+    border: none;
+}
+/*hide sections*/
+.tab-content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+/*Display content of active tab*/
+.tab-content.active {
+    display: block;
+}
+
+
 /* Catering Form Styles */
 form {
     background-color: #ffffff64; /* White background for form */
