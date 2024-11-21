@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,8 +37,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="catering.html">Catering</a></li>
-                <li><a href="">Gallery</a></li>
-                <li><a href="">Order Online</a></li>
+                <li><a href="index.html">Gallery</a></li>
+                <li><a href="menu.html">Order Online</a></li>
             </ul>
         </nav>
         <div class="social-media">
@@ -57,36 +58,93 @@
     <main>
         <section class="catering">
             <h1>Order Form</h1>
-            <form action="/action_page.php" method="post"
-                <label for="first">First Name</label>
-                <input type="text" name="first" id="first">
-
-                <label for="last">Last Name</label>  
-                <input type="text" name="last" id="last">
-                
-                <label for="email">Email Address</label>  
-                <input type="email" name="email" id="email" placeholder="name@domain.com">
-
-                <label for="num">Phone Number</label>  
-                <input type="tel" name="num" id="num" placeholder="(###) ###-####">
-
-                <label for="event">Date of Event</label>  
-                <input type="date" name="event" id="event">
-
-                <label for="guests">Estimate # of Guests</label>  
-                <input type="number" name="guests" id="guests">
-
-                <label for="services">What type of Service are you looking for?</label>  
-                <select id="services" name="services">
+            <form action="/action_page.php" method="post">
+                <!-- First Name -->
+                <label for="first">First Name <span aria-hidden="true">*</span></label>
+                <input 
+                    type="text" 
+                    name="first" 
+                    id="first" 
+                    required 
+                    aria-required="true" 
+                    aria-label="First Name"
+                    placeholder="Enter your first name">
+    
+                <!-- Last Name -->
+                <label for="last">Last Name <span aria-hidden="true">*</span></label>
+                <input 
+                    type="text" 
+                    name="last" 
+                    id="last" 
+                    required 
+                    aria-required="true" 
+                    aria-label="Last Name"
+                    placeholder="Enter your last name">
+    
+                <!-- Email -->
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    required 
+                    aria-required="true" 
+                    aria-label="Email Address"
+                    placeholder="name@domain.com">
+    
+                <!-- Phone Number -->
+                <label for="num">Phone Number <span aria-hidden="true">*</span></label>
+                <input 
+                    type="tel" 
+                    name="num" 
+                    id="num" 
+                    required 
+                    aria-required="true" 
+                    aria-label="Phone Number"
+                    placeholder="(###) ###-####"
+                    pattern="\(\d{3}\) \d{3}-\d{4}"
+                    title="Please enter your phone number in the format (###) ###-####">
+    
+                <!-- Date of Event -->
+                <label for="event">Date of Event <span aria-hidden="true">*</span></label>
+                <input 
+                    type="date" 
+                    name="event" 
+                    id="event" 
+                    required 
+                    aria-required="true"
+                    aria-label="Date of Event">
+    
+                <!-- Estimate # of Guests -->
+                <label for="guests">Estimate # of Guests <span aria-hidden="true">*</span></label>
+                <input 
+                    type="number" 
+                    name="guests" 
+                    id="guests" 
+                    required 
+                    aria-required="true" 
+                    aria-label="Number of Guests"
+                    placeholder="Enter number of guests"
+                    min="1">
+    
+                <!-- Type of Service -->
+                <label for="services">What type of service are you looking for?</label>
+                <select 
+                    id="services" 
+                    name="services" 
+                    aria-label="Service Type">
                     <option value="Onsite Food Truck">Onsite Food Truck</option>
                     <option value="Pickup Catering">Pickup Catering</option>
                     <option value="Festival">Festival</option>
                 </select>
-
-                <input type="submit" value="Submit">
+    
+                <!-- Submit Button -->
+                <br>
+                <button type="submit" aria-label="Submit Form">Submit</button>
             </form>
         </section>
     </main>
+    
     
     <footer>
         <ul>

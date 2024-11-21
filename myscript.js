@@ -16,32 +16,22 @@ function closePopup() {
 
 // // JavaScript to create a modern menu with tabs for viewing sections
 
-// // Function to open a tab and display its content
-// // Function to toggle the display of tab contents
-// function openTab(tabId) {
-//     // Get all tab content elements
-//     const tabContents = document.querySelectorAll('.tab-content');
-//     tabContents.forEach(content => {
-//         content.classList.remove('active'); // Hide all content
-//     });
+function openTab(event, tabId) {
+    // Hide all tab contents
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => {
+        content.classList.remove('active');
+    });
 
-//     // Get all tab buttons
-//     const tabButtons = document.querySelectorAll('.tab-button');
-//     tabButtons.forEach(button => {
-//         button.classList.remove('active'); // Remove active state from all buttons
-//     });
+    // Remove active class from all buttons
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => {
+        button.classList.remove('active');
+    });
 
-//     // Show the selected tab content
-//     document.getElementById(tabId).classList.add('active');
+    // Show the clicked tab's content
+    document.getElementById(tabId).classList.add('active');
 
-//     // Highlight the clicked tab button
-//     event.currentTarget.classList.add('active');
-// }
-
-// // Automatically display the first tab on page load
-// document.addEventListener('DOMContentLoaded', () => {
-//     const firstButton = document.querySelector('.tab-button');
-//     if (firstButton) {
-//         firstButton.click();
-//     }
-// });
+    // Add active class to the clicked button
+    event.currentTarget.classList.add('active');
+}

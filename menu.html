@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="myscript.js"></script>
     <title>Menu - Tisdale's Southern BBQ</title>
 </head>
 
@@ -36,8 +37,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="catering.html">Catering</a></li>
-                <li><a href="">Gallery</a></li>
-                <li><a href="">Order Online</a></li>
+                <li><a href="index.html">Gallery</a></li>
+                <li><a href="menu.html">Order Online</a></li>
             </ul>
         </nav>
         <div class="social-media">
@@ -54,17 +55,17 @@
             <h2><i>Treat Yourself To Our Mouth Watering Tongue Twisting BBQ</i></h2>
 
             <div class="tabs">
-                <button class="tab-button" onclick="openTab('Dinners')">Dinners</button>
-                <button class="tab-button" onclick="openTab('Sandwiches')">Sandwiches</button>
-                <button class="tab-button" onclick="openTab('Sides')">Sides</button>
-                <button class="tab-button" onclick="openTab('MeatOnly')">Meat Only</button>
-                <button class="tab-button" onclick="openTab('FamilyDinner')">Family Dinner</button>
-                <button class="tab-button" onclick="openTab('Desserts')">Desserts</button>
-                <button class="tab-button" onclick="openTab('Drinks')">Drinks</button>
+                <button class="tab-button active" onclick="openTab(event, 'Dinners')">Dinners</button>
+                <button class="tab-button" onclick="openTab(event, 'Sandwiches')">Sandwiches</button>
+                <button class="tab-button" onclick="openTab(event, 'Sides')">Sides</button>
+                <button class="tab-button" onclick="openTab(event, 'Meats')">Meat Only</button>
+                <button class="tab-button" onclick="openTab(event, 'FamilyDinner')">Family Dinner</button>
+                <button class="tab-button" onclick="openTab(event, 'Desserts')">Desserts</button>
+                <button class="tab-button" onclick="openTab(event, 'Drinks')">Drinks</button>
             </div>
 
             <br>
-            <div id="Dinners" class="tab-content">
+            <div id="Dinners" class="tab-content active">
                 <h2>Dinners</h2>
                 <h3>*2 Sides + Roll*</h3><br>
                 <p>BBQ Pork Rib Plate - $14.69</p>
@@ -108,7 +109,7 @@
                 <p>BBQ Pull Pork 1/2 lb. - $9.00 | 1 lb. $17.00</p>
             </div>
             <br>
-            <div id="Family Dinner" class="tab-content"></div>
+            <div id="FamilyDinner" class="tab-content">
                 <h2>Tisdale's Big Family Dinner</h2>
                 <h3>*Includes 4 - 8 oz. Homemade Sides, 4 Drinks, 4 Dinner Rolls*</h3><br>
                 <p>lb. Bristket, lb. Pull Pork, 1/2 Slab Rib - $79.99</p>

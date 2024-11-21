@@ -47,7 +47,7 @@ header {
 }
 
 .welcome{
-    background-image: url('../css/home.jpg');
+    background-image: url('home.jpg');;
     background-size: cover ; /*covers entire section*/
     background-position: center; /* Centers the image */
     background-blend-mode: difference; /* Blends background in */
@@ -58,7 +58,7 @@ header {
     justify-content: center; /* Centers vertically */
     text-align: center;
     height: 800px;
-    background-color: #000000; /* Background color for section */
+    background-color: #00000057; /* Background color for section */
     border: 3px solid #ffffff; /* Border around the section */
     border-radius: 10px; /* Optional: rounded corners */
 }
@@ -79,7 +79,7 @@ header {
 }
 
 /* Add animation to h2 */
-.animated-text {
+.animated {
     animation: slideDown 2s ease-in-out forwards; /* Applies the slideDown animation */
     opacity: 0; /* Ensures the text is initially hidden */
 }
@@ -149,7 +149,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #494747; /* Orange background on hover */
+    background-color: #494747; /* background on hover */
     border-radius: 5px; /* Rounded corners for hover effect */
 }
 
@@ -203,40 +203,50 @@ p {
 .tabs {
     display: flex;
     justify-content: center;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
 .tab-button {
-    float: left;
-    margin: 5px;
-    background-color: #000000;
+    padding: 10px 20px;
     border: none;
-    color: white;
+    background-color: #f4f4f4;
     cursor: pointer;
-    font-size: 16px;
     border-radius: 5px;
-}
-
-.tab-button:hover {
-    background-color: #c61717;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 .tab-button.active {
-    background-color: #c61717; /* Active button styling */
-    color: #c61717;
+    background-color: #7b7979;
+    color: #ffffff;
+    font-weight: bold;
 }
 
-/* Hide tab content by default */
+.tab-button:hover {
+    background-color: #757575;
+    color: black;
+}
+
 .tab-content {
     display: none;
+    padding: 6px 12px;
+    border: 1px double #000000;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.menu-page {
+    text-align: center;
+}
+
+footer {
     text-align: center;
     margin-top: 20px;
 }
 
-/* Show active tab content */
-.tab-content.active {
-    display: block;
-}
 
 
 
@@ -274,8 +284,47 @@ form button {
 }
 
 form button:hover {
-    background-color: #ff9900; /* Orange background on hover */
+    background-color: #7b7979; /* Orange background on hover */
 }
+
+button[type="submit"] {
+    /* Appearance */
+    background-color: #7b7979; /* Bright orange for visibility */
+    color: #ffffff; /* White text for contrast */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Add padding for better touch target */
+    font-size: 1rem; /* Adjust font size for readability */
+    font-weight: bold; /* Make text bold */
+    cursor: pointer; /* Change cursor to indicate clickability */
+    text-transform: uppercase; /* Optional: Make text uppercase */
+
+    /* Add some shadow for depth */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
+}
+
+/* Hover Effect */
+button[type="submit"]:hover {
+    background-color: #666666; /* Darker orange for hover */
+    box-shadow: 3px 3px 7px #c61717(0, 0, 0, 0.3); /* Enhance shadow */
+    transform: scale(1.05); /* Slightly enlarge button */
+}
+
+/* Focus State for Accessibility */
+button[type="submit"]:focus {
+    outline: 3px solid #666666; /* Add an orange focus outline */
+    outline-offset: 2px; /* Space the outline from the button */
+}
+
+/* Disabled State */
+button[type="submit"]:disabled {
+    background-color: #7b7979; /* Gray background for disabled */
+    color: #666666; /* Dark gray text */
+    cursor: not-allowed; /* Indicate non-clickability */
+    box-shadow: none; /* Remove shadow */
+}
+
 
 /* Footer Styles */
 footer {
